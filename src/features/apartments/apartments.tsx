@@ -30,7 +30,7 @@ export const Apartments = () => {
 						onPageChange={(page) => setPage(page)}
 						total={Number(data?.data?.total)}
 					/>
-					<div className="grid w-full grid-cols-3 gap-5">
+					<div className="grid w-full grid-cols-1 gap-5 lg:grid-cols-3">
 						{data?.data?.data?.map((apartment) => (
 							<Card key={apartment._id} apartment={apartment} />
 						))}
