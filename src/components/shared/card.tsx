@@ -1,5 +1,4 @@
 import { ListStar, NavigationArrow, Star } from "@phosphor-icons/react"
-import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
@@ -19,12 +18,8 @@ export const Card = ({ apartment }: CardProps) => {
 		<div className="flex w-full flex-col gap-4">
 			<div className="relative flex aspect-[3/2] w-full items-center justify-center overflow-hidden">
 				{apartment.imageUrls.map((url, index) => (
-					<motion.div
+					<div
 						key={index}
-						initial={{ x: "100%" }}
-						animate={{ x: 0 }}
-						exit={{ x: "-100%" }}
-						transition={{ duration: 0.5, type: "tween" }}
 						className={`relative aspect-[3/2] w-full rounded-lg ${current === index ? "block" : "hidden"}`}>
 						<Image
 							src={url}
@@ -33,7 +28,7 @@ export const Card = ({ apartment }: CardProps) => {
 							sizes="(max-width:1024px)100%"
 							className="rounded-lg object-cover"
 						/>
-					</motion.div>
+					</div>
 				))}
 				<div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center justify-center gap-2">
 					{apartment.imageUrls.map((_, index) => (

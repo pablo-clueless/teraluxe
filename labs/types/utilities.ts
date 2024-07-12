@@ -5,7 +5,7 @@ export type QueryParams = {
 export type BaseResponse<T> = {
 	error: boolean
 	message: string
-	data?: T
+	data: T
 }
 
 export type HttpError = {
