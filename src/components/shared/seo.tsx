@@ -3,7 +3,8 @@ import Head from "next/head"
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://localhost:3001"
 
-const DEFAULT_OG_IMAGE = ""
+const DEFAULT_OG_IMAGE =
+	"https://res.cloudinary.com/pabloclueless/image/upload/v1720803024/screenshot_sgjqce.png"
 
 interface SeoProps {
 	readonly title?: string
@@ -18,7 +19,7 @@ interface SeoProps {
 
 export function Seo({
 	title = "",
-	description = `A website for buying and selling real estate in Nigeria.`,
+	description = `Find the best rentals on Teraluxe.`,
 	siteName = "Teraluxe",
 	canonical = APP_URL,
 	ogImage = DEFAULT_OG_IMAGE,
